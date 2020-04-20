@@ -1,0 +1,27 @@
+{
+  "name": "@amcharts/amcharts4-geodata",
+  "version": "4.1.14",
+  "author": "amCharts <contact@amcharts.com> (https://www.amcharts.com/)",
+  "description": "amCharts 4 Geo Data",
+  "homepage": "https://www.amcharts.com/",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://www.amcharts.com/support/",
+    "email": "contact@amcharts.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amcharts/amcharts4-geodata.git"
+  },
+  "keywords": [
+    "amcharts",
+    "javascript",
+    "charts",
+    "typescript",
+    "geodata"
+  ]
+
+,"_resolved": "https://registry.npmjs.org/@amcharts/amcharts4-geodata/-/amcharts4-geodata-4.1.14.tgz"
+,"_integrity": "sha512-zb9eo88CcASLtGvyvKZ/ICM8xedPWK9HWSX8rixT1ObrmSv0jetQ3ky8K89smw3xfesTpZ68h5J1Isv/Fhj8aQ=="
+,"_from": "@amcharts/amcharts4-geodata@latest"
+}
