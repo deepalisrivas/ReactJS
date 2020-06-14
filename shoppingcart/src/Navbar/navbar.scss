@@ -1,4 +1,4 @@
-$light-color: #adefd1ff;
+$light-color: #f6f3fa;
 $dark-color: #00203fff;
 
 .inner-container {
@@ -14,7 +14,7 @@ $dark-color: #00203fff;
 }
 nav {
   padding: 2rem 1rem;
-  background: linear-gradient(to right, #114357, #f29492);
+  background: linear-gradient(to right, #c31432, #240b36);
   ul {
     display: flex;
     justify-content: flex-end;
@@ -53,7 +53,14 @@ nav {
       a {
         text-decoration: none;
         color: $light-color;
+        text-shadow: 2px 2px 2px #f33cb8;
+
       }
     }
+  }
+}
+@media (max-width:500px) {
+  ul{
+    flex-direction: column;
   }
 }

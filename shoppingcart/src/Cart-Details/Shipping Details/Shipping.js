@@ -10,21 +10,13 @@ class Shipping extends Component {
       this.setState({ ShowShip: true });
       this.props.addShipping();
     }
-    // else {
-    //   this.props.substractShipping();
-    // }
   };
   handleNotCheck = (e) => {
     if (e.target.checked && this.state.ShowShip === true) {
-      //
-      //     // if (e.target.checked) {
       this.props.substractShipping();
     }
   };
 
-  // componentWillUnmount() {
-  //   if (this.refs.shipping.checked) this.props.substractShipping();
-  // }
   state = {
     count: false,
     ShowShip: false,
@@ -268,15 +260,14 @@ class Shipping extends Component {
 
                 <div className="summary">
                   <div>
-                    <h3>HAVE A VOUCHER? </h3>
-                    <i className="fa fa-caret-down fa-2x" />
-                  </div>
-
-                  <div>
                     <p>Sub Total</p>
                     <p>${this.props.total}</p>
                   </div>
-
+                  {/*<div>*/}
+                  {/*  <p>Shipping</p>*/}
+                  {/*  <p><strike>FREE</strike> $20</p>*/}
+                  {/*  <p>FREE</p>*/}
+                  {/*</div>*/}
                   <div>
                     <p>Taxes</p>
                     <p>${this.props.taxes}</p>

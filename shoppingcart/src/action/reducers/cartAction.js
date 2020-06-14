@@ -4,31 +4,33 @@ import {
   ADD_QUANTITY,
   SUBTRACT_QUANTITY,
   DISPLAY_ITEM,
-  DISPLAY_MODEL,
+  DISPLAY_MODEL_IN_CART,
   RESET_CART,
 } from "../actionTypes";
-export const addToCart = (id) => {
+export const addToCart = (itemA) => {
   return {
     type: ADD_TO_CART,
-    id,
+    itemA,
   };
 };
-export const removeFromCart = (id) => {
+export const removeFromCart = (item) => {
   return {
     type: REMOVE_FROM_CART,
-    id,
+    // id : {id,subId},
+    item,
+    // subId,
   };
 };
-export const addQuantity = (id) => {
+export const addQuantity = (item) => {
   return {
     type: ADD_QUANTITY,
-    id,
+    item,
   };
 };
-export const subtractQuantity = (id) => {
+export const subtractQuantity = (item) => {
   return {
     type: SUBTRACT_QUANTITY,
-    id,
+    item,
   };
 };
 export const displayItem = (id) => {
@@ -37,14 +39,13 @@ export const displayItem = (id) => {
     id,
   };
 };
-export const displayModel = (id) => {
+export const displayModelInCart = (item) => {
   return {
-    type: DISPLAY_MODEL,
-    id,
+    type: DISPLAY_MODEL_IN_CART,
+    item,
   };
 };
 export const resetCart = () => {
-  debugger;
   return {
     type: RESET_CART,
   };

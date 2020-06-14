@@ -6,5 +6,6 @@ export const DISPLAY_ITEM = "DISPLAY_ITEM";
 export const ADD_SHIPPING = "ADD_SHIPPING";
 export const SUBTRACT_SHIPPING = "SUBTRACT_SHIPPING";
 export const ADD_COUPON = "ADD_COUPON";
-export const DISPLAY_MODEL = "DISPLAY_MODEL";
+export const DISPLAY_MODEL_IN_CART = "DISPLAY_MODEL_IN_CART";
 export const RESET_CART = "RESET_CART";
+

@@ -1,4 +1,4 @@
-$light-color: #adefd1ff;
+$light-color: #f6f3fa;
 $dark-color: #00203fff;
 
 .footer-ul {
@@ -18,5 +18,7 @@ nav {
     text-align: center;
     color: $light-color;
     padding: 1rem 0;
+    text-shadow: 2px 2px 2px #f33cb8;
+
   }
 }

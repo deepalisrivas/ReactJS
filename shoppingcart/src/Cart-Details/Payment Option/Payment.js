@@ -12,11 +12,16 @@ class Payment extends Component {
     checkedPaypal: false,
     submit: false,
     onShow: false,
+    onApply:false,
+    coupon:false,
+    count:true,
   };
   handleOnShow = (e) => {
-    this.setState({ onShow: true });
-    if (e.target.value === "FREE100") {
-      this.props.addCoupon();
+    this.setState({ onShow: true});
+    if(e.target.value==="FREE10" && e.key==='Enter' && this.state.count) {
+      // this.state.coupon = true;
+        this.props.addCoupon();
+      this.state.count=false;
     }
   };
   handleCardNumber = (e) => {
@@ -39,6 +44,7 @@ class Payment extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
+    console.log(this.state.FirstName);
     this.setState({ submit: true });
   };
   render() {
@@ -46,6 +52,11 @@ class Payment extends Component {
       return <Redirect to="/" />;
     }
     if (this.state.submit) {
+      console.log(this.props.items)
+      console.log(this.props.grandTotal)
+      console.log(JSON.parse(localStorage.getItem('user')));
+      // console.log(this.props.addedItems)
+
       return <Redirect to="/Successful" />;
     }
     const { CardNumber, cvv, expiry } = this.state;
@@ -240,7 +251,8 @@ class Payment extends Component {
                       <input
                         type="text"
                         className="input-text"
-                        onChange={this.handleOnShow}
+                        // value={this.state.coupon}
+                        onKeyDown={this.handleOnShow}
                       />
                     </div>
                   ) : null}

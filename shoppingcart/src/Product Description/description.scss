@@ -1,4 +1,4 @@
-$light-color: #adefd1ff;
+$light-color: #fff;
 $dark-color: #00203fff;
 li {
   margin: 0;
@@ -23,7 +23,7 @@ li {
   //justify-content: space-between;
 
   select {
-    background: #fff;
+    background:$light-color;
     border: solid 1px $dark-color;
     outline: none;
   }
@@ -34,4 +34,68 @@ li {
 .prod-list>div {
   padding:2rem 0 0 0;
 
+}
+select{
+  padding:0.3rem;
+  background: #ccc;
+  outline: none;
+}
+
+#slideshow {
+  overflow: hidden;
+  height: 428px;
+  width: 428px;
+  margin: 0 auto;
+}
+
+.slide-wrapper {
+  animation: slide 10s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 428px;
+  width: 428px;
+}
+@keyframes slide {
+  20% {margin-left: 0;}
+  30% {margin-left: -428px;}
+  50% {margin-left: -428px;}
+  60% {margin-left: -856px;}
+  70% {margin-left: -856px;}
+  80% {margin-left: -1284px;}
+  90% {margin-left: -1284px;}
+}
+@media (max-width: 500px) {
+  .reviews{
+    grid-template-columns: 1fr;
+    &>div{
+      padding: 1rem 0;
+    }
+  }
+  #slideshow{
+    width:300px;
+    height:300px;
+  }
+  .slide {
+    float: left;
+    height: 300px;
+    width: 300px;
+  }
+  @keyframes slide {
+
+    20% {margin-left: 0;}
+    30% {margin-left: -300px;}
+    50% {margin-left:-300px;}
+    60% {margin-left: -600px;}
+    70% {margin-left: -600px;}
+    80% {margin-left: -900px;}
+    90% {margin-left: -900px;}
+  }
+}
+
+@media (min-width: 501px)and(max-width:900px){
+  .main-div{
+    grid-template-columns: 1fr 1fr;
+  }
 }
